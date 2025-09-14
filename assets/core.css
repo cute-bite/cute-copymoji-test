@@ -482,3 +482,17 @@ html[data-theme="dark"] .star.is-active {
     justify-items: center;               /* 동그란 칩을 칸 중앙에 */
   }
 }
+
+/* A2HS hint bar */
+#a2hsHint{
+  position: fixed; left: 12px; right: 12px; bottom: 12px;
+  padding: 10px 12px; border-radius: 12px;
+  background: var(--chip); color: var(--text);
+  box-shadow: 0 6px 24px rgba(0,0,0,.12);
+  display: none; align-items: center; gap: 10px; z-index: 2147483647;
+  font-size: 14px;
+}
+#a2hsHint .close{ margin-left:auto; opacity:.7; cursor:pointer; }
+
+.fav-desc { margin:0; }
+.small-note { margin-top:0; display:block; }
