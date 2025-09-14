@@ -435,3 +435,32 @@ textarea:focus{ outline: none; box-shadow: none; }
   color: var(--input-fg);
   background: var(--input-bg);
 }
+
+
+/* Mobile: cap card width and center it, keep ads full-width */
+@media (max-width: 1023px){
+  /* 카드만 폭 제한 + 중앙 정렬 (광고 .infeed 는 영향 X) */
+  /* Favorites */
+  #grid .card{ max-width: 620px; width: 100%; justify-self: center; }
+
+  /* Line / Replace (카드 클래스가 .emo-card) */
+  #grid .emo-card{ max-width: 620px; width: 100%; justify-self: center; }
+
+  /* Dot/ASCII */
+  #dotGrid .dot-card,
+  #asciiGrid .dot-card{ max-width: 620px; width: 100%; justify-self: center; }
+}
+
+/* Dark mode: unfavorited star should still be visible */
+html[data-theme="dark"] .fav-btn,
+html[data-theme="dark"] .star {
+  color: #ddd;                /* 비활성 별도 눈에 띄게 */
+  background: #2b2b2b;        /* 칩색 */
+  border-color: #5a5a5a;      /* 경계 */
+}
+
+/* 선택: 활성 상태는 더 밝게 (이미 페이지마다 .is-active 규칙 있으면 생략 가능) */
+html[data-theme="dark"] .fav-btn.is-active,
+html[data-theme="dark"] .star.is-active {
+  color: #fff;
+}
