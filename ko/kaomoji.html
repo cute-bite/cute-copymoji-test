@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>라인 (텍스트 구분선) — Cute CopyMoji🌸</title>
-  <meta name="description" content="귀여운 라인 구분선 복사하기 — 텍스트 분리자. 탭해서 복사; ★를 눌러 즐겨찾기에 저장.">
+  <title>카오모지 (이모티콘) — Cute CopyMoji🌸</title>
+  <meta name="description" content="귀여운 카오모지 복사하기 — 일본 이모티콘 / 아스키 얼굴. 탭해서 복사; ★를 눌러 즐겨찾기에 저장.">
 
-  <link rel="canonical" href="https://cutecopymoji.com/ko/line.html" />
+  <link rel="canonical" href="https://cutecopymoji.com/ko/kaomoji.html" />
 
   <!-- Favicon / App icons -->
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -23,14 +23,14 @@
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cute CopyMoji🌸">
-  <meta property="og:title" content="라인 (텍스트 구분선) — Cute CopyMoji🌸">
-  <meta property="og:description" content="구분선을 탭해서 복사하세요. ★를 눌러 즐겨찾기에 추가하세요.">
-  <meta property="og:url" content="https://cutecopymoji.com/en/line.html">
+  <meta property="og:title" content="카오모지 (이모티콘) — Cute CopyMoji🌸">
+  <meta property="og:description" content="카오모지를 탭해서 복사하세요. ★를 눌러 즐겨찾기에 추가하세요.">
+  <meta property="og:url" content="https://cutecopymoji.com/en/kaomoji.html">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:image" content="https://cutecopymoji.com/og.png">
   <meta property="og:image:alt" content="Cute CopyMoji🌸">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="라인 (텍스트 구분선) — Cute CopyMoji🌸">
+  <meta name="twitter:title" content="카오모지 (이모티콘) — Cute CopyMoji🌸">
   <meta name="twitter:description" content="탭해서 복사. ★를 눌러 즐겨찾기.">
   <meta name="twitter:image" content="https://cutecopymoji.com/og.png">
 
@@ -38,16 +38,14 @@
   <link rel="stylesheet" href="../assets/core.css?v=4">
   <script src="../assets/core.js" defer></script>
 
-  <!-- Hreflang (7) -->
-<link rel="alternate" hreflang="x-default" href="https://cutecopymoji.com/en/line.html" />
-<link rel="alternate" hreflang="en" href="https://cutecopymoji.com/en/line.html" />
-<link rel="alternate" hreflang="ko" href="https://cutecopymoji.com/ko/line.html" />
-<link rel="alternate" hreflang="ja" href="https://cutecopymoji.com/ja/line.html" />
-<link rel="alternate" hreflang="es" href="https://cutecopymoji.com/es/line.html" />
-<link rel="alternate" hreflang="pt" href="https://cutecopymoji.com/pt/line.html" />
-<link rel="alternate" hreflang="fr" href="https://cutecopymoji.com/fr/line.html" />
-<link rel="alternate" hreflang="de" href="https://cutecopymoji.com/de/line.html" />
-
+  <link rel="alternate" hreflang="x-default" href="https://cutecopymoji.com/en/kaomoji.html" />
+<link rel="alternate" hreflang="en" href="https://cutecopymoji.com/en/kaomoji.html" />
+<link rel="alternate" hreflang="ko" href="https://cutecopymoji.com/ko/kaomoji.html" />
+<link rel="alternate" hreflang="ja" href="https://cutecopymoji.com/ja/kaomoji.html" />
+<link rel="alternate" hreflang="es" href="https://cutecopymoji.com/es/kaomoji.html" />
+<link rel="alternate" hreflang="pt" href="https://cutecopymoji.com/pt/kaomoji.html" />
+<link rel="alternate" hreflang="fr" href="https://cutecopymoji.com/fr/kaomoji.html" />
+<link rel="alternate" hreflang="de" href="https://cutecopymoji.com/de/kaomoji.html" />
 
   <!-- AdSense (loader once per page) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4324510515730355" crossorigin="anonymous"></script>
@@ -170,44 +168,6 @@
     .after-quick{ margin-top: 0 !important; } /* no extra gap above ad */
     main .infeed:last-child{ margin-bottom: 16px !important; } /* match core default */
 
-
-    /* === Line page layout: 1 col (mobile) → 3 cols (desktop) === */
-    #grid{ grid-template-columns: 1fr !important; }
-    @media(min-width:1024px){
-      #grid{ grid-template-columns: repeat(3, 1fr) !important; }
-    }
-
-
-    /* === Line page: mobile auto-fit long lines === */
-    @media(max-width:1023px){
-      .emo-card{ overflow:hidden; }
-      .emo-t{ white-space:nowrap; }
-    }
-    /* Slightly smaller base size; will be adjusted by JS when needed */
-    .emo-t{ font-size: clamp(12px, 4.2vw, 16px); }
-
-
-    /* === Line page: slightly smaller text on desktop === */
-    @media(min-width:1024px){
-      #grid .emo-t{ font-size: 13px !important; line-height: 1.25; }
-    }
-
-
-    /* Line page: allow horizontal compress when text is still too long */
-    #grid .emo-t{ display:inline-block; transform:none; transform-origin:left center; }
-
-
-/* Mobile gutter so cards don't touch the right edge */
-@media (max-width: 1023px){
-  main.wrap{
-    padding-left: max(12px, env(safe-area-inset-left));
-    padding-right: max(12px, env(safe-area-inset-right));
-  }
-}
-
-
-
-
 </style>
 </head>
 <body>
@@ -217,8 +177,8 @@
       <button class="hamburger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false"
               onclick="(function(btn){document.body.classList.toggle('menu-open');btn.setAttribute('aria-expanded',document.body.classList.contains('menu-open'));})(this)">☰</button>
       <nav class="nav desktop-nav" role="navigation" aria-label="Primary">
-        <a href="./kaomoji.html">카오모지</a>
-        <a href="./line.html" aria-current="page">라인</a>
+        <a href="./kaomoji.html" aria-current="page">카오모지</a>
+        <a href="./line.html">라인</a>
         <a href="./replace.html">텍스트 대치</a>
         <a href="./emoji.html">이모지</a>
         <a href="./dotart.html">도트/아스키</a>
@@ -244,14 +204,14 @@
     <a href="./settings.html"><span>설정</span></a>
   </div>
 
-  <div class="backdrop" onclick="document.body.classList.remove('menu-open');document.querySelector('.hamburger') && document.querySelector('.hamburger').setAttribute('aria-expanded','false')"></div>
+  <div class="backdrop" onclick="document.body.classList.remove('menu-open');document.querySelector('.hamburger')?.setAttribute('aria-expanded','false')"></div>
 
   <main class="wrap">
     <!-- Kaomoji area (no .panel) -->
-    <section class="kao-wrap" aria-labelledby="lineTitle">
+    <section class="kao-wrap" aria-labelledby="kaoTitle">
       <div class="kao-head">
-        <h1 id="lineTitle" class="kao-title">라인 (텍스트 구분선)</h1>
-        <p class="kao-desc">귀여운 라인 구분선 복사하기 — 텍스트 분리자. 탭해서 복사; ★를 눌러 즐겨찾기에 저장.</p>
+        <h1 id="kaoTitle" class="kao-title">카오모지 (이모티콘)</h1>
+        <p class="kao-desc">귀여운 카오모지 복사하기 — 일본 이모티콘 / 아스키 얼굴. 탭해서 복사; ★를 눌러 즐겨찾기에 저장.</p>
       </div>
 
       <section id="grid" aria-live="polite"></section>
@@ -267,8 +227,9 @@
              data-ad-slot="9132817506"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
+
+               <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
-        <script>try{ (adsbygoogle = window.adsbygoogle || []).push({}); }catch(e){};</script>
     </section>
 
     <!-- Quick access (no ads inside; inner bottom gap removed above) -->
@@ -337,7 +298,7 @@
     <div style="margin-top:8px;font-weight:600">이모지</div>
   </a>
 
-  <!-- Dot/ASCII -->
+  <!-- Dot/아스키 -->
   <a class="panel quick-item" href="./dotart.html" style="text-align:center;padding:16px">
     <svg class="mi big" viewBox="0 0 24 24" aria-hidden="true">
       <circle class="stroke" cx="7" cy="7" r="1.2"/><circle class="stroke" cx="12" cy="7" r="1.2"/><circle class="stroke" cx="17" cy="7" r="1.2"/>
@@ -385,8 +346,7 @@
   </a>
 </section>
 
-</section>
-
+</section
 <!-- slot_end -->
 <div class="infeed only-desktop" aria-label="Sponsored">
   <ins class="adsbygoogle"
@@ -395,11 +355,11 @@
        data-ad-slot="9132817506"
        data-ad-format="auto"
        data-full-width-responsive="true"></ins>
-  <script>try{ (adsbygoogle = window.adsbygoogle || []).push({}); }catch(e){};</script>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 
-    <!-- 모바일 전용 광고 자리 -->
+    <!--  모바일 전용 광고 자리 -->
 <div class="infeed only-mobile" aria-label="Sponsored">
   <ins class="adsbygoogle"
        style="display:block"
@@ -409,6 +369,7 @@
        data-full-width-responsive="true"></ins>
 </div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 
   </main>
 
@@ -442,21 +403,18 @@
   </script>
 
   <!-- Data -->
-  <script src="../assets/line-data.js"></script>
-  <script>window.DEFAULT_ITEMS = window.LINE_ITEMS || window.DEFAULT_LINES || window.DEFAULT_ITEMS || [];</script>
+  <script src="../assets/emoticon-data.js"></script>
   <script>
     (function(){ try{
-      if(typeof window.DEFAULT_ITEMS === 'undefined'){
-  if(typeof DEFAULT_LINES !== 'undefined'){ window.DEFAULT_ITEMS = DEFAULT_LINES; }
-  else if(typeof DEFAULT_ITEMS !== 'undefined'){ window.DEFAULT_ITEMS = DEFAULT_ITEMS; }
-}
+      if(typeof window.DEFAULT_ITEMS === 'undefined' && typeof DEFAULT_ITEMS !== 'undefined'){
+        window.DEFAULT_ITEMS = DEFAULT_ITEMS;
       }
     }catch(e){} })();
   </script>
 
   <!-- Kaomoji logic with responsive ad cadence + theme toast -->
   <script>
-  const FAV_KEY = 'line.favs.v1';
+  const FAV_KEY = 'emo.favs.v1';
   let INSERT_EVERY = 28;  // recalculated from columns
   let PAGE_SIZE = 84;     // recalculated as cadence * 3
   const $grid = document.getElementById('grid');
@@ -483,24 +441,6 @@
     t.textContent=msg; t.classList.add('show'); clearTimeout(toast._t);
     toast._t=setTimeout(()=>t.classList.remove('show'), 1000);
   }
-  
-  function __fitLineText(card, text){
-    try{
-      if(window.matchMedia('(min-width:1024px)').matches){ text.style.fontSize=''; return; } // desktop: reset
-      const cs = getComputedStyle(card);
-      const pad = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
-      const available = Math.max(0, card.clientWidth - pad - 2);
-      let min=10, max=parseFloat(getComputedStyle(text).fontSize)||16;
-      // binary search ~6 steps
-      for(let k=0;k<6;k++){
-        const fs = (min+max)/2;
-        text.style.fontSize = fs+'px';
-        if(text.scrollWidth > available) max = fs; else min = fs;
-      }
-      text.style.fontSize = Math.max(10, Math.floor(min)) + 'px';
-    }catch(e){}
-  }
-
   function makeCard(it){
     const favInit = isFav(it.t);
     const card = document.createElement('div');
@@ -514,8 +454,6 @@
 
     card.appendChild(favBtn);
     card.appendChild(text);
-    // fit long lines on mobile
-    setTimeout(function(){ __fitLineText(card, text); }, 0);
 
     card.addEventListener('click', async ()=>{ await copyText(it.t); toast('Copied!'); });
     favBtn.addEventListener('click', (e)=>{
@@ -591,22 +529,16 @@
   window.addEventListener('DOMContentLoaded', () => {
     try{ (adsbygoogle = window.adsbygoogle || []).push({}); }catch(e){}
     resetAndRender();
-    document.getElementById('loadMoreBtn')?.addEventListener('click', function(){ appendMore(); setTimeout(function(){ document.querySelectorAll('#grid .emo-card .emo-t').forEach(function(t){ __fitLineText(t.parentElement, t); }); }, 0); });
+    document.getElementById('loadMoreBtn')?.addEventListener('click', appendMore);
   });
   window.addEventListener('resize', () => {
-    // refit lines on resize
-    // refit lines on resize
-    document.querySelectorAll('#grid .emo-card .emo-t').forEach(function(t){ __fitLineText(t.parentElement, t); });
     const old = INSERT_EVERY;
     recalcCadence();
     if(old !== INSERT_EVERY){ resetAndRender(); }
   });
   </script>
 
-
-
-
   <div id="toast" class="toast" role="status" aria-live="polite">Copied!</div>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "라인 구분선이란 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "라인 구분선은 텍스트를 분리하는 데 사용되는 문자나 기호입니다."}}, {"@type": "Question", "name": "라인 구분선을 어떻게 복사하나요?", "acceptedAnswer": {"@type": "Answer", "text": "카드를 탭하면 클립보드에 복사됩니다."}}, {"@type": "Question", "name": "즐겨찾기는 어떻게 작동하나요?", "acceptedAnswer": {"@type": "Answer", "text": "카드의 ★를 눌러 저장하세요. 나중에 즐겨찾기 페이지에서 저장된 항목을 찾을 수 있습니다."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "카오모지란 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "카오모지는 아스키/유니코드 문자로 만든 일본 이모티콘입니다."}}, {"@type": "Question", "name": "카오모지를 어떻게 복사하나요?", "acceptedAnswer": {"@type": "Answer", "text": "카드를 탭하면 클립보드에 복사됩니다."}}, {"@type": "Question", "name": "즐겨찾기는 어떻게 작동하나요?", "acceptedAnswer": {"@type": "Answer", "text": "카드의 ★를 눌러 저장하세요. 나중에 즐겨찾기 페이지에서 저장된 항목을 찾을 수 있습니다."}}]}</script>
 </body>
 </html>
