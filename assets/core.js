@@ -158,30 +158,7 @@
 
 
 
-// iOS Safari에서만 '홈 화면에 추가' 안내 배너 노출 (이미 설치된 경우 미노출)
-(function(){
-  const ua = navigator.userAgent;
-  const isIOS = /iphone|ipad|ipod/i.test(ua);
-  const isStandalone = window.navigator.standalone === true
-    || window.matchMedia('(display-mode: standalone)').matches;
-  const isSafari = /^((?!chrome|android).)*safari/i.test(ua);
 
-  if (!(isIOS && isSafari) || isStandalone) return;
-  if (localStorage.getItem('a2hsHintClosed') === '1') return;
-
-  const bar = document.createElement('div');
-  bar.id = 'a2hsHint';
-  bar.innerHTML = `
-    <span>iOS: <strong>공유</strong> ▶︎ <strong>홈 화면에 추가</strong>를 눌러 설치해 보세요.</span>
-    <button class="close" aria-label="닫기">✕</button>
-  `;
-  document.body.appendChild(bar);
-  bar.style.display = 'flex';
-  bar.querySelector('.close')?.addEventListener('click', ()=>{
-    localStorage.setItem('a2hsHintClosed','1');
-    bar.remove();
-  });
-})();
 
 
 // === A2HS: apple-touch-icon 유효 경로를 1개만 선택해 주입 ===
