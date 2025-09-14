@@ -155,17 +155,7 @@
 })();
 
 
-// iOS: apple-touch-icon을 모든 페이지에 자동 주입
-(function(){
-  const href = new URL('./apple-touch-icon.png', location.href).href; // 현재 페이지 기준 상대경로
-  if (!document.querySelector('link[rel="apple-touch-icon"]')) {
-    const link = document.createElement('link');
-    link.rel = 'apple-touch-icon';
-    link.sizes = '180x180';
-    link.href = href;                                // en/에 있는 아이콘 사용
-    document.head.appendChild(link);
-  }
-})();
+
 
 
 // iOS Safari에서만 '홈 화면에 추가' 안내 배너 노출 (이미 설치된 경우 미노출)
