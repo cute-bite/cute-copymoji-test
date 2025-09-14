@@ -211,6 +211,19 @@
     /* === Shuffle font weight: normal === */
     #shuffleBtn{ font-weight: 400 !important; }
 
+
+    /* Mobile: keep input + Shuffle on the same row */
+@media (max-width: 767px){
+  #baseInput{
+    flex: 0 1 200px;  /* 기본 폭 더 축소 */
+    min-width: 140px;
+    max-width: 220px;
+  }
+  .toolrow .actions{ flex: 0 0 auto; }     /* 셔플 버튼은 줄바꿈 방지 */
+  #filters{ flex-basis: 100%; margin-top: 6px; } /* 필터는 다음 줄로 내려 안정화 */
+}
+
+
 </style>
   <script src="../assets/username-decor.js"></script>
 </head>
