@@ -441,14 +441,14 @@ textarea:focus{ outline: none; box-shadow: none; }
 @media (max-width: 1023px){
   /* 카드만 폭 제한 + 중앙 정렬 (광고 .infeed 는 영향 X) */
   /* Favorites */
-  #grid .card{ max-width: 620px; width: 90%; justify-self: center; }
+  #grid .card{ max-width: 620px; width: 100%; justify-self: center; }
 
   /* Line / Replace (카드 클래스가 .emo-card) */
-  #grid .emo-card{ max-width: 620px; width: 90%; justify-self: center; }
+  #grid .emo-card{ max-width: 620px; width: 100%; justify-self: center; }
 
   /* Dot/ASCII */
   #dotGrid .dot-card,
-  #asciiGrid .dot-card{ max-width: 620px; width: 90%; justify-self: center; }
+  #asciiGrid .dot-card{ max-width: 620px; width: 100%; justify-self: center; }
 }
 
 /* Dark mode: unfavorited star should still be visible */
@@ -463,4 +463,12 @@ html[data-theme="dark"] .star {
 html[data-theme="dark"] .fav-btn.is-active,
 html[data-theme="dark"] .star.is-active {
   color: #fff;
+}
+
+/* Hamburger follows theme accent on light/pastel */
+@media (max-width:768px){
+  .hamburger{ color: var(--accent); }               /* 텍스트/폰트 아이콘 */
+  .hamburger svg{ stroke: var(--accent); fill:none; }/* 임베드 SVG */
+  .hamburger .mi .stroke{ stroke: var(--accent); }   /* 아이콘 세트(.mi) */
+  .hamburger .mi .fill{ fill: var(--accent); }
 }
