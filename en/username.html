@@ -688,7 +688,7 @@
 
     // events
     input.addEventListener('input', render);
-    document.getElementById('shuffleBtn')?.addEventListener('click', render);
+
     document.getElementById('shuffleBtn')?.addEventListener('click', render);filters.addEventListener('click', (e)=>{
       const btn = e.target.closest('[data-tab]'); if(!btn) return;
       $$('.chips .chip', filters).forEach(b=>b.classList.remove('is-active'));
@@ -701,7 +701,20 @@
     render();
     // ensure All chip highlighted on init
     (function(){ const f=document.querySelector('#filters [data-tab="all"]'); if(f){ document.querySelectorAll('#filters .chip').forEach(c=>c.classList.remove('is-active')); f.classList.add('is-active'); } })();
-    window.addEventListener('resize', ()=>{ render(); });
+
+// 열 수가 실제로 바뀔 때만 렌더 (모바일 주소창 노출/숨김으로 인한 불필요 렌더 방지)
+(function(){
+  let lastCols = getCols();             // 현재 그리드 열 수 기억
+  window.addEventListener('resize', () => {
+    const now = getCols();
+    if (now !== lastCols) {             // 열 수 바뀐 경우에만
+      lastCols = now;
+      render();
+    }
+  }, { passive: true });
+})();
+
+
   })();
   </script>
 
