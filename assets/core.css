@@ -472,3 +472,13 @@ html[data-theme="dark"] .star.is-active {
   .hamburger .mi .stroke{ stroke: var(--accent); }   /* 아이콘 세트(.mi) */
   .hamburger .mi .fill{ fill: var(--accent); }
 }
+
+/* Mobile: Theme chips = 5 x 2 (총 9개면 5 + 4) */
+@media (max-width:768px){
+  .settings .themes{
+    display: grid;                       /* flex → grid */
+    grid-template-columns: repeat(5, 1fr);/* 한 줄에 5개 */
+    gap: 12px;                           /* settings.html에서 쓰는 gap과 동일 */
+    justify-items: center;               /* 동그란 칩을 칸 중앙에 */
+  }
+}
