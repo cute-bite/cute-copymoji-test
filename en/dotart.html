@@ -287,6 +287,17 @@
       #dotGrid .dot-card{ height: clamp(300px, 72vw, 460px) !important; }
     }
 
+
+/* Mobile gutter so cards don't touch the right edge */
+@media (max-width: 1023px){
+  main.wrap{
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+}
+
+
+
 </style>
   <script src="../assets/dotart-data.js"></script>
   <script src="../assets/asciiart-data.js"></script>

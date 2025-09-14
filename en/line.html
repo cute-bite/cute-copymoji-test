@@ -185,6 +185,18 @@
     /* Line page: allow horizontal compress when text is still too long */
     #grid .emo-t{ display:inline-block; transform:none; transform-origin:left center; }
 
+
+/* Mobile gutter so cards don't touch the right edge */
+@media (max-width: 1023px){
+  main.wrap{
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+}
+
+
+
+
 </style>
 </head>
 <body>

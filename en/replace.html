@@ -170,6 +170,17 @@
     /* Long text wraps naturally */
     .emo-t{ white-space:pre-wrap; word-break:break-word; }
 
+
+
+    /* Mobile gutter so cards don't touch the right edge */
+@media (max-width: 1023px){
+  main.wrap{
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+}
+
+
 </style>
   <script src="../assets/replace-data.js"></script>
 </head>
