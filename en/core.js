@@ -194,6 +194,22 @@
 })();
 
 
+// === A2HS: apple-touch-icon 다중 후보 주입(./, ../, /) ===
+(function(){
+  if (document.querySelector('link[rel="apple-touch-icon"]')) return;
+  const candidates = [
+    new URL('./apple-touch-icon.png', location.href).href,
+    new URL('../apple-touch-icon.png', location.href).href,
+    location.origin + '/apple-touch-icon.png'
+  ];
+  candidates.forEach(href => {
+    const link = document.createElement('link');
+    link.rel = 'apple-touch-icon';
+    link.sizes = '180x180';
+    link.href = href;
+    document.head.appendChild(link);
+  });
+})();
 
 
 
