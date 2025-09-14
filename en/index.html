@@ -63,6 +63,8 @@
 
   <script src="../assets/core.js" defer></script>
 
+  
+
   <!-- JSON-LD -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"Cute CopyMoji","url":"https://cutecopymoji.com/","potentialAction":{"@type":"SearchAction","target":"https://cutecopymoji.com/en/emoji.html?q={query}","query-input":"required name=query"}}
@@ -73,6 +75,17 @@
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style>
+  /* Mobile only: hero 텍스트 1px 축소 */
+  @media (max-width: 1023px){
+    .hero > p:first-of-type,
+    .hero .note{
+      font-size: calc(1em - 1px);
+    }
+  }
+</style>
+
 
 </head>
 <body>
