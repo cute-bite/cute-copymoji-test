@@ -517,25 +517,4 @@ html[data-theme="dark"] .star.is-active {
   }
 }
 
-/* MOBILE — 라인 & 텍스트대치만 카드 폭 줄이고 중앙 정렬 */
-@media (max-width:1023px){
-  /* 라인 */
-  section[aria-labelledby="lineTitle"] #grid{ justify-items: center; }
-  section[aria-labelledby="lineTitle"] #grid .emo-card{
-    width: min(520px, 80vw);
-    max-width: 100%;
-    margin-inline: auto;
-    justify-self: center;
-    box-sizing: border-box;
-  }
 
-  /* 텍스트 대치(= h1 id가 kaoTitle) */
-  section[aria-labelledby="kaoTitle"] #grid{ justify-items: center; }
-  section[aria-labelledby="kaoTitle"] #grid .emo-card{
-    width: min(520px, 80vw);
-    max-width: 100%;
-    margin-inline: auto;
-    justify-self: center;
-    box-sizing: border-box;
-  }
-}
