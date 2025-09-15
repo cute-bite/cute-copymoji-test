@@ -497,3 +497,35 @@ html[data-theme="dark"] .star.is-active {
 .fav-desc { margin:0; }
 .small-note { margin-top:0; display:block; }
 
+/* MOBILE — 카드 폭 줄이고 가운데 정렬 (페이지별 분기) */
+@media (max-width:1023px){
+
+  /* 라인 */
+  #lineTitle ~ #grid .emo-card{
+    width: min(520px, 80vw);
+    margin-inline: auto;
+    justify-self: center;
+  }
+
+  /* 텍스트 대치 */
+  #replaceTitle ~ #grid .emo-card{
+    width: min(520px, 80vw);
+    margin-inline: auto;
+    justify-self: center;
+  }
+
+  /* 도트아트 & 아스키아트 */
+  #dotGrid .dot-card,
+  #asciiGrid .dot-card{
+    width: min(520px, 80vw);
+    margin-inline: auto;
+    justify-self: center;
+  }
+
+  /* 즐겨찾기 */
+  #favoritesTitle ~ #grid .card{
+    width: min(520px, 80vw);
+    margin-inline: auto;
+    justify-self: center;
+  }
+}
