@@ -496,3 +496,11 @@ html[data-theme="dark"] .star.is-active {
 
 .fav-desc { margin:0; }
 .small-note { margin-top:0; display:block; }
+
+@media (max-width: 1023px){
+  main.wrap{
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+}
+
