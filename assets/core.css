@@ -549,3 +549,16 @@ html[data-theme="dark"] .star.is-active {
   }
 }
 
+/* SETTINGS page only — left-align helper notes under Theme */
+@media (max-width: 4000px){ /* 항상 적용, 범위 확보용 래퍼 */
+  /* settings.html 판별: canonical 또는 내비 현재탭 */
+  html:has(head link[rel="canonical"][href*="/settings.html"]) .settings .note,
+  html:has(.desktop-nav a[aria-current="page"][href$="/settings.html"]) .settings .note,
+  html:has(head link[rel="canonical"][href*="/settings.html"]) #theme,
+  html:has(.desktop-nav a[aria-current="page"][href$="/settings.html"]) #theme {
+    text-align: left !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
