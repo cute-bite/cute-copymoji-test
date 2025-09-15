@@ -501,16 +501,3 @@ html[data-theme="dark"] .star.is-active {
 @media (max-width: 1023px){
   /* 1) 그리드 아이템을 중앙에 놓기 (stretch 무력화) */
   #grid { justify-items: center; } /* 필요 시 align-items:start 유지 */
-
-  /* 2) 카드 폭: 화면기준 90vw와 620px 중 더 작은 값, 중앙 고정 */
-  #grid .emo-card,
-  #grid .card,
-  #dotGrid .dot-card,
-  #asciiGrid .dot-card{
-    width: min(620px, 80vw);
-    max-width: 100%;
-    margin-inline: auto;      /* 중앙 정렬 보강 */
-    justify-self: center;     /* 그리드 정렬 보강(벨트&서스펜더) */
-    box-sizing: border-box;   /* 패딩/보더 포함 안전 */
-  }
-}
