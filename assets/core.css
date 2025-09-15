@@ -504,3 +504,10 @@ html[data-theme="dark"] .star.is-active {
   }
 }
 
+/* core.css — GLOBAL MOBILE GUTTER */
+@media (max-width: 1023px){
+  .wrap {
+    padding-inline: max(12px, env(safe-area-inset-left)) max(12px, env(safe-area-inset-right));
+    box-sizing: border-box;
+  }
+}
