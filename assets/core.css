@@ -497,7 +497,3 @@ html[data-theme="dark"] .star.is-active {
 .fav-desc { margin:0; }
 .small-note { margin-top:0; display:block; }
 
-/* MOBILE — 카드 중앙정렬 + 폭 캡 */
-@media (max-width: 1023px){
-  /* 1) 그리드 아이템을 중앙에 놓기 (stretch 무력화) */
-  #grid { justify-items: center; } /* 필요 시 align-items:start 유지 */
