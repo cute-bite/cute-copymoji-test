@@ -441,14 +441,14 @@ textarea:focus{ outline: none; box-shadow: none; }
 @media (max-width: 1023px){
   /* 카드만 폭 제한 + 중앙 정렬 (광고 .infeed 는 영향 X) */
   /* Favorites */
-  #grid .card{ max-width: 620px; width: 90%; justify-self: center; }
+  #grid .card{ max-width: 620px; width: 80%; justify-self: center; }
 
   /* Line / Replace (카드 클래스가 .emo-card) */
-  #grid .emo-card{ max-width: 620px; width: 90%; justify-self: center; }
+  #grid .emo-card{ max-width: 620px; width: 80%; justify-self: center; }
 
   /* Dot/ASCII */
   #dotGrid .dot-card,
-  #asciiGrid .dot-card{ max-width: 620px; width: 90%; justify-self: center; }
+  #asciiGrid .dot-card{ max-width: 620px; width: 80%; justify-self: center; }
 }
 
 /* Dark mode: unfavorited star should still be visible */
@@ -507,7 +507,7 @@ html[data-theme="dark"] .star.is-active {
   #grid .card,
   #dotGrid .dot-card,
   #asciiGrid .dot-card{
-    width: min(620px, 90vw);
+    width: min(620px, 80vw);
     max-width: 100%;
     margin-inline: auto;      /* 중앙 정렬 보강 */
     justify-self: center;     /* 그리드 정렬 보강(벨트&서스펜더) */
