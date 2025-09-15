@@ -497,17 +497,14 @@ html[data-theme="dark"] .star.is-active {
 .fav-desc { margin:0; }
 .small-note { margin-top:0; display:block; }
 
+/* 보완: 모바일에서 카드 최대폭 지정 + 중앙정렬 (광고 .infeed에는 적용 X) */
 @media (max-width: 1023px){
-  main.wrap{
-    padding-left: max(12px, env(safe-area-inset-left));
-    padding-right: max(12px, env(safe-area-inset-right));
-  }
-}
-
-/* core.css — GLOBAL MOBILE GUTTER */
-@media (max-width: 1023px){
-  .wrap {
-    padding-inline: max(12px, env(safe-area-inset-left)) max(12px, env(safe-area-inset-right));
-    box-sizing: border-box;
+  #grid .card,
+  #grid .emo-card,
+  #dotGrid .dot-card,
+  #asciiGrid .dot-card{
+    max-width: 620px;
+    width: 100%;
+    justify-self: center;
   }
 }
